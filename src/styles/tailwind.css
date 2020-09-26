@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.tab{
+    @apply text-center border-b border-gray-split transition transition-colors duration-300 w-full flex;
+}
+.tab a{
+    @apply flex w-full h-full items-center justify-center;
+}
+.tab:hover{
+    @apply bg-gray-800
+}
+.tab:last-child{
+    border-bottom: 0 !important;
+}
