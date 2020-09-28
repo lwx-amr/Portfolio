@@ -15,13 +15,15 @@ module.exports = {
         600: '#343A40',
         700: '#08090D',
         800: '#1A1E26',
-        split: '#929CA660'
+        split: '#929CA660',
+        modal: '#0f0f0f90'
       },
       green: {
         100: '#CAE3DB',
         200: '#224229',
         300: '#074f3550',
-        400: '#061C14'
+        400: '#061C14',
+        btn: '#306a29'
       }
     },
     screens: {
@@ -32,8 +34,9 @@ module.exports = {
     },
     boxShadow: {
       xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
-      sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+      sm: '0 1px 2px 0 rgba(0, 0, 0, 0.25)',
       sb: '4px 0px 4px 0 rgba(0, 0, 0, 0.4)',
+      btn: '0px 4px 4px 2px rgba(10, 10, 10, 0.3)',
       default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       none: 'none'
     }

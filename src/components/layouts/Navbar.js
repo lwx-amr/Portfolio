@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-const useLocalStorage = (defaultValue) => {
-  const [state, setState] = useState(() => window.localStorage.getItem('darkMode') || defaultValue)
-  useEffect(() => {
-    window.localStorage.setItem('darkMode', state)
-  }, [state])
-  return [state, setState]
-}
+import { useLocalStorageBool } from '../../utils/localStorage'
 
-// eslint-disable-next-line react/prop-types
 const Navbar = ({ pageTitle }) => {
-  const [darkMode, setDarkMode] = useLocalStorage()
+  const [darkMode, setDarkMode] = useLocalStorageBool('darkMode')
   const handleClick = () => {
     setDarkMode(!darkMode)
   }
@@ -24,12 +17,12 @@ const Navbar = ({ pageTitle }) => {
             <div
               className={
                 'transition duration-100 w-10 h-5 rounded-full ' +
-                (!darkMode ? 'bg-gray-600' : 'bg-green-300')
+                (darkMode ? 'bg-green-300' : 'bg-gray-600')
               }></div>
             <div
               className={
                 'transition duration-100 w-6 h-6 rounded-full absolute ' +
-                (!darkMode ? 'bg-gray-400 left-0' : 'bg-green-200 right-0')
+                (darkMode ? 'bg-green-200 right-0' : 'bg-gray-400 left-0')
               }></div>
           </div>
         </button>
