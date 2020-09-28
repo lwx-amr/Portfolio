@@ -3,15 +3,21 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Sidebar from './layouts/Sidebar'
 import Navbar from './layouts/Navbar'
-import NotYet from './pages/NotYet'
-import WhoAmI from './pages/WhoAmI'
 import Subscribe from './modals/Subscribe'
 import Contact from './modals/Contact'
+import NotYet from './pages/NotYet'
+import WhoAmI from './pages/WhoAmI'
+import AlgAndDS from './pages/AlgAndDS'
+import Games from './pages/Games'
+import Apps from './pages/Apps'
+import Blogs from './pages/Blogs'
+import Tools from './pages/Tools'
+import NotFound from './pages/NotFound'
 
 const App = () => {
   const [title, setTitle] = useState(() => 'Who Am I')
   const [subscribeModal, setSubscribeModal] = useState(false)
-  const [contactModal, setContactModal] = useState(true)
+  const [contactModal, setContactModal] = useState(false)
 
   const handleClick = (clickedTitle) => setTitle(clickedTitle)
   const handleSubscribe = (flag) => setSubscribeModal(flag)
@@ -29,7 +35,42 @@ const App = () => {
             <Navbar pageTitle={title} />
             <Switch>
               <Route exact path={['/', '/about-me']} component={WhoAmI} />
-              <Route path="/*" component={() => <NotYet handleSubscribe={handleSubscribe} />} />
+              <Route
+                exact
+                path="/algorithms-data-structures"
+                component={() => (
+                  <AlgAndDS NoContent={() => <NotYet handleSubscribe={handleSubscribe} />} />
+                )}
+              />
+              <Route
+                exact
+                path="/apps"
+                component={() => (
+                  <Apps NoContent={() => <NotYet handleSubscribe={handleSubscribe} />} />
+                )}
+              />
+              <Route
+                exact
+                path="/games"
+                component={() => (
+                  <Games NoContent={() => <NotYet handleSubscribe={handleSubscribe} />} />
+                )}
+              />
+              <Route
+                exact
+                path="/blogs"
+                component={() => (
+                  <Blogs NoContent={() => <NotYet handleSubscribe={handleSubscribe} />} />
+                )}
+              />
+              <Route
+                exact
+                path="/used-tools"
+                component={() => (
+                  <Tools NoContent={() => <NotYet handleSubscribe={handleSubscribe} />} />
+                )}
+              />
+              <Route path="/*" component={NotFound} />
             </Switch>
           </div>
         </div>

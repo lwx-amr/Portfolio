@@ -23,7 +23,7 @@ const tabs = [
     action: '/games'
   },
   {
-    title: 'Blogging',
+    title: 'Blogs',
     icon: '/icons/sidebar/blogs.svg',
     action: '/blogs'
   },
