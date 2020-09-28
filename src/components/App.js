@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Sidebar from './layouts/Sidebar'
 import Navbar from './layouts/Navbar'
-import NotYet from './NotYet'
-import WhoAmI from './WhoAmI'
-import Subscribe from './Subscribe'
+import NotYet from './pages/NotYet'
+import WhoAmI from './pages/WhoAmI'
+import Subscribe from './modals/Subscribe'
+import Contact from './modals/Contact'
 
 const App = () => {
   const [title, setTitle] = useState(() => 'Who Am I')
   const [subscribeModal, setSubscribeModal] = useState(false)
+  const [contactModal, setContactModal] = useState(true)
 
   const handleClick = (clickedTitle) => setTitle(clickedTitle)
   const handleSubscribe = (flag) => setSubscribeModal(flag)
@@ -17,7 +19,11 @@ const App = () => {
   return (
     <div className="app bg-bdGray text-gray-100 h-screen">
       <Router>
-        <Sidebar handleClick={handleClick} handleSubscribe={setSubscribeModal} />
+        <Sidebar
+          handleClick={handleClick}
+          handleSubscribe={setSubscribeModal}
+          handleContact={setContactModal}
+        />
         <div className="content-part ml-20 px-16 pt-8">
           <div className="container">
             <Navbar pageTitle={title} />
@@ -29,6 +35,7 @@ const App = () => {
         </div>
       </Router>
       {subscribeModal ? <Subscribe handleSubscribe={setSubscribeModal} /> : null}
+      {contactModal ? <Contact handleContact={setContactModal} /> : null}
     </div>
   )
 }
