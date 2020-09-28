@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const NotFound = () => {
+const NotFound = ({ setPageTitle }) => {
+  const pageTitle = 'Page not Found'
+  useEffect(() => {
+    setPageTitle(pageTitle)
+  }, [pageTitle])
   return <div>404 Not Found</div>
 }
 

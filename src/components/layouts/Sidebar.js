@@ -34,12 +34,12 @@ const tabs = [
   }
 ]
 
-const Sidebar = ({ handleClick, handleSubscribe, handleContact }) => {
+const Sidebar = ({ handleSubscribe, handleContact }) => {
   let i = 0
   const tabList = tabs.map((tab) => {
     return (
       <div className="tab" key={i++}>
-        <Link to={tab.action} onClick={() => handleClick(tab.title)}>
+        <Link to={tab.action}>
           <div>
             <div className="image">
               <img src={tab.icon} className="m-auto w-10" alt={tab.title + ' image'} />
