@@ -44,14 +44,14 @@ const Sidebar = ({ handleSubscribe, handleContact }) => {
             <div className="image">
               <img src={tab.icon} className="m-auto w-10" alt={tab.title + ' image'} />
             </div>
-            <h6 className="text-gray-100 text-sm mt-1 font-medium leading-none">{tab.title}</h6>
+            <h6 className="text-primary text-sm mt-1 font-medium leading-none">{tab.title}</h6>
           </div>
         </Link>
       </div>
     )
   })
   return (
-    <div className="sidebar w-20 bg-gray-600 h-screen fixed flex flex-wrap shadow-sb">
+    <div className="sidebar w-20 bg-secondary h-screen fixed flex flex-wrap shadow-sb">
       {tabList}
       <div className="tab" key={i++}>
         <button
@@ -65,7 +65,7 @@ const Sidebar = ({ handleSubscribe, handleContact }) => {
                 alt="subscribe icon"
               />
             </div>
-            <h6 className="text-gray-100 text-sm mt-1 font-medium leading-none">Subscribe</h6>
+            <h6 className="text-primary text-sm mt-1 font-medium leading-none">Subscribe</h6>
           </div>
         </button>
       </div>
@@ -77,7 +77,7 @@ const Sidebar = ({ handleSubscribe, handleContact }) => {
             <div className="image">
               <img src="/icons/sidebar/contact.svg" className="m-auto w-10" alt="contact icon" />
             </div>
-            <h6 className="text-gray-100 text-sm mt-1 font-medium leading-none">Contact</h6>
+            <h6 className="text-primary text-sm mt-1 font-medium leading-none">Contact</h6>
           </div>
         </button>
       </div>

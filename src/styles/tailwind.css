@@ -1,3 +1,21 @@
+.dark {
+    --color-bg-primary: #141C26;
+    --color-bg-secondary: #2a2e35;
+    --color-bg-secondaryhover: #1A1E26;
+    --color-text-primary: #F7F7F7;
+    --color-text-secondary: #E1E1E1;
+    --color-text-lightg: #929CA6;
+}
+
+.light {
+    --color-bg-primary: #F7F7F7;
+    --color-bg-secondary: #ffffff;
+    --color-bg-secondaryhover: #e7e7e9;
+    --color-text-primary: #141C26;
+    --color-text-secondary: #343A40;
+    --color-text-lightg: #4E7371;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +27,7 @@
     @apply flex w-full h-full items-center justify-center;
 }
 .tab:hover{
-    @apply bg-gray-800
+    background-color: var(--color-bg-secondaryhover) !important;
 }
 .tab:last-child{
     border-bottom: 0 !important;

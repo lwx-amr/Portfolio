@@ -24,7 +24,8 @@ module.exports = {
         300: '#074f3550',
         400: '#061C14',
         btn: '#306a29'
-      }
+      },
+      transparent: 'transparent'
     },
     screens: {
       sm: { min: '640px', max: '767px' },
@@ -36,13 +37,19 @@ module.exports = {
       xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.25)',
       sb: '4px 0px 4px 0 rgba(0, 0, 0, 0.4)',
-      btn: '0px 4px 4px 2px rgba(10, 10, 10, 0.3)',
+      btn: '0px 2px 6px 2px rgba(10, 10, 10, 0.4)',
       default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       none: 'none'
     },
     extend: {
-      screens: {
-        dark: { raw: '(prefers-color-scheme: dark)' }
+      backgroundColor: {
+        primary: 'var(--color-bg-primary)',
+        secondary: 'var(--color-bg-secondary)'
+      },
+      textColor: {
+        primary: 'var(--color-text-primary)',
+        secondary: 'var(--color-text-secondary)',
+        lightg: 'var(--color-text-lightg)'
       }
     }
   }

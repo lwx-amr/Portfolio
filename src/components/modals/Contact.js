@@ -10,7 +10,7 @@ const Contact = ({ handleContact }) => {
     <div className="z-30 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 outline-none focus:outline-none">
       <div className="relative y-6 mx-auto" style={{ width: '580px' }}>
         {/*content*/}
-        <div className="border-0 shadow-lg relative flex flex-col w-full bg-gray-600 outline-none focus:outline-none z-50 py-8 px-6">
+        <div className="border-0 shadow-lg relative flex flex-col w-full bg-secondary outline-none focus:outline-none z-50 py-8 px-6">
           {/*header*/}
           <div className="flex items-start justify-between pb-2 rounded-t">
             <h3 className="text-xl font-medium">Send me a message</h3>
@@ -27,7 +27,7 @@ const Contact = ({ handleContact }) => {
             <form className="mt-4" action="index.php" method="get" id="message-form">
               <div className="flex items-center justify-between">
                 <div className="w-1/2 pr-3">
-                  <label htmlFor="name" className="text-gray-100 font-medium">
+                  <label htmlFor="name" className="text-primary font-medium">
                     Name
                   </label>
                   <input
@@ -37,12 +37,12 @@ const Contact = ({ handleContact }) => {
                     value={formBody.name}
                     onChange={handleEmailChange}
                     required
-                    className="flex flex-grow rounded w-full sm:max-w-xs px-4 py-2 text-base leading-6 
-                text-white font-medium appearance-none border border-gray-400 shadow-sm bg-gray-600 placeholder-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300"
+                    className="rounded w-full sm:max-w-xs px-4 py-2 text-base leading-6 
+                text-white font-medium border border-gray-400 shadow-sms focus:outline-none focus:shadow-outline-blue bg-transparent"
                   />
                 </div>
                 <div className="w-1/2 pl-3">
-                  <label htmlFor="email" className="text-gray-100 font-medium">
+                  <label htmlFor="email" className="text-primary font-medium">
                     Email
                   </label>
                   <input
@@ -52,13 +52,13 @@ const Contact = ({ handleContact }) => {
                     value={formBody.email}
                     onChange={handleEmailChange}
                     required
-                    className="flex flex-grow rounded w-full sm:max-w-xs px-4 py-2 text-base leading-6 
-                text-white font-medium appearance-none border border-gray-400 shadow-sm placeholder-gray-500 bg-gray-600 focus:outline-none focus:shadow-outline-blue focus:border-blue-300"
+                    className="rounded w-full sm:max-w-xs px-4 py-2 text-base leading-6 
+                text-white font-medium border border-gray-400 shadow-sm focus:outline-none focus:shadow-outline-blue bg-transparent"
                   />
                 </div>
               </div>
               <div className="mt-4">
-                <label htmlFor="message" className="text-gray-100 font-medium">
+                <label htmlFor="message" className="text-primary font-medium">
                   Message
                 </label>
                 <textarea
@@ -66,8 +66,8 @@ const Contact = ({ handleContact }) => {
                   id="message"
                   cols="30"
                   rows="6"
-                  className="flex flex-grow rounded w-full sm:max-w-xs px-4 py-2 text-base leading-6 
-                text-white font-medium appearance-none border border-gray-400 shadow-sm bg-gray-600 placeholder-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300"></textarea>
+                  className="rounded w-full sm:max-w-xs px-4 py-2 text-base leading-6 
+                text-white font-medium border border-gray-400 shadow-sm focus:outline-none focus:shadow-outline-blue bg-transparent"></textarea>
               </div>
               <p
                 x-show="error"
@@ -80,14 +80,14 @@ const Contact = ({ handleContact }) => {
           {/*footer*/}
           <div className="w-full flex justify-end items-center mt-8">
             <button
-              className="text-gray-100 font-medium mr-8 focus:outline-none"
+              className="text-primary font-medium mr-8 focus:outline-none"
               onClick={() => handleContact(false)}>
               Cancel
             </button>
             <button
               type="submit"
               form="message-form"
-              className="bg-green-btn  text-white text-sm font-semibold uppercase px-4 pb-2 pt-3 rounded shadow-sm hover:shadow-lg outline-none leading-snug focus:outline-none hover:bg-green-200"
+              className="bg-green-btn text-gray-100 text-sm font-semibold uppercase px-4 pb-2 pt-3 rounded shadow-sm hover:shadow-lg outline-none leading-snug focus:outline-none hover:bg-green-200"
               style={{
                 transition: 'all .15s ease'
               }}>

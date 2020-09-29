@@ -4,8 +4,15 @@
         "source.fixAll": true
     },
     "cSpell.words": [
+        "bg",
+        "color",
+        "color bg secondaryhover",
+        "color text lightg",
+        "lightg",
         "necolas",
-        "tailwind"
+        "secondaryhover",
+        "tailwind",
+        "text"
     ],
     "files.associations": {
         "*.js": "javascriptreact"

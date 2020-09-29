@@ -5,7 +5,7 @@ import Sidebar from './layouts/Sidebar'
 import Navbar from './layouts/Navbar'
 import Subscribe from './modals/Subscribe'
 import Contact from './modals/Contact'
-import NotYet from './pages/NotYet'
+import NotYet from './partial/NotYet'
 import WhoAmI from './pages/WhoAmI'
 import AlgAndDS from './pages/AlgAndDS'
 import Games from './pages/Games'
@@ -19,11 +19,8 @@ const App = () => {
   const [subscribeModal, setSubscribeModal] = useState(false)
   const [contactModal, setContactModal] = useState(false)
 
-  const handleTitle = (renderedTitle) => setTitle(renderedTitle)
-  const handleSubscribe = (flag) => setSubscribeModal(flag)
-
   return (
-    <div className="app bg-bdGray text-gray-100 h-screen">
+    <div className="app bg-primary text-primary h-screen">
       <Router>
         <Sidebar handleSubscribe={setSubscribeModal} handleContact={setContactModal} />
         <div className="content-part ml-20 px-16 pt-8">
@@ -33,15 +30,15 @@ const App = () => {
               <Route
                 exact
                 path={['/', '/about-me']}
-                component={() => <WhoAmI setPageTitle={handleTitle} />}
+                component={() => <WhoAmI setPageTitle={setTitle} />}
               />
               <Route
                 exact
                 path="/algorithms-data-structures"
                 component={() => (
                   <AlgAndDS
-                    setPageTitle={handleTitle}
-                    NoContent={() => <NotYet handleSubscribe={handleSubscribe} />}
+                    setPageTitle={setTitle}
+                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
                   />
                 )}
               />
@@ -50,8 +47,8 @@ const App = () => {
                 path="/apps"
                 component={() => (
                   <Apps
-                    setPageTitle={handleTitle}
-                    NoContent={() => <NotYet handleSubscribe={handleSubscribe} />}
+                    setPageTitle={setTitle}
+                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
                   />
                 )}
               />
@@ -60,8 +57,8 @@ const App = () => {
                 path="/games"
                 component={() => (
                   <Games
-                    setPageTitle={handleTitle}
-                    NoContent={() => <NotYet handleSubscribe={handleSubscribe} />}
+                    setPageTitle={setTitle}
+                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
                   />
                 )}
               />
@@ -70,8 +67,8 @@ const App = () => {
                 path="/blogs"
                 component={() => (
                   <Blogs
-                    setPageTitle={handleTitle}
-                    NoContent={() => <NotYet handleSubscribe={handleSubscribe} />}
+                    setPageTitle={setTitle}
+                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
                   />
                 )}
               />
@@ -80,12 +77,12 @@ const App = () => {
                 path="/used-tools"
                 component={() => (
                   <Tools
-                    setPageTitle={handleTitle}
-                    NoContent={() => <NotYet handleSubscribe={handleSubscribe} />}
+                    setPageTitle={setTitle}
+                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
                   />
                 )}
               />
-              <Route path="/*" component={() => <NotFound setPageTitle={handleTitle} />} />
+              <Route path="/*" component={() => <NotFound setPageTitle={setTitle} />} />
             </Switch>
           </div>
         </div>
