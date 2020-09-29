@@ -46,6 +46,7 @@ module.exports = {
       backgroundColor: {
         primary: 'var(--color-bg-primary)',
         secondary: 'var(--color-bg-secondary)',
+        socialHover: 'var(--color-bg-socialHover)',
         tags: {
           html: '#E44D26',
           css: '#2757EA',
@@ -67,7 +68,12 @@ module.exports = {
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)',
         lightg: 'var(--color-text-lightg)',
-        restColor: '#009CD5'
+        restColor: '#009CD5',
+        socialHover: 'var(--color-text-socialHover)'
+      },
+      borderColor: {
+        primary: 'var(--color-text-primary)',
+        secondary: 'var(--color-text-secondary)'
       }
     }
   }

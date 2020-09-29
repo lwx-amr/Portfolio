@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 
+import Footer from './../layouts/Footer'
 const tags = [
   {
     name: 'HTML',
@@ -61,7 +62,6 @@ const tags = [
     bg: 'json'
   }
 ]
-
 const WhoAmI = ({ setPageTitle }) => {
   const pageTitle = 'Who Am I'
   useEffect(() => {
@@ -114,7 +114,7 @@ const WhoAmI = ({ setPageTitle }) => {
           <h3 className="text-base font-semibold text-secondary">
             Faculty Computers and Artificial Intelligence - Computer Science
           </h3>
-          <span className="text-secondary font-semibold">2018 - 2020</span>
+          <span className="text-secondary font-semibold">2016 - 2020</span>
         </div>
       </div>
       <div className="mb-10">
@@ -130,6 +130,9 @@ const WhoAmI = ({ setPageTitle }) => {
       <div className="mb-10">
         <h4 className="text-xl font-semibold text-primary mb-4">Technology related skills</h4>
         <div className="flex flex-wrap justify-center">{tagList}</div>
+      </div>
+      <div className="mt-24">
+        <Footer />
       </div>
     </div>
   )
