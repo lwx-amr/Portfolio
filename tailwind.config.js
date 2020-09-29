@@ -36,20 +36,38 @@ module.exports = {
     boxShadow: {
       xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.25)',
-      sb: '4px 0px 4px 0 rgba(0, 0, 0, 0.4)',
-      btn: '0px 2px 6px 2px rgba(10, 10, 10, 0.4)',
+      sb: 'var(--shadow-sidebar)',
+      btn: 'var(--shadow-btn)',
+      img: 'var(--shadow-image)',
       default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       none: 'none'
     },
     extend: {
       backgroundColor: {
         primary: 'var(--color-bg-primary)',
-        secondary: 'var(--color-bg-secondary)'
+        secondary: 'var(--color-bg-secondary)',
+        tags: {
+          html: '#E44D26',
+          css: '#2757EA',
+          js: '#D4B830',
+          react: '#51C2E0',
+          node: '#88BC5B',
+          mongo: '#4FAA41',
+          npm: '#CB3837',
+          docker: '#2496ED',
+          sass: '#E98DB8',
+          jqeury: '#193556',
+          git: '#1B1F23',
+          ajax: '#0784CC',
+          rest: '#FFFFFF',
+          json: '#73C366'
+        }
       },
       textColor: {
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)',
-        lightg: 'var(--color-text-lightg)'
+        lightg: 'var(--color-text-lightg)',
+        restColor: '#009CD5'
       }
     }
   }

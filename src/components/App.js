@@ -20,7 +20,7 @@ const App = () => {
   const [contactModal, setContactModal] = useState(false)
 
   return (
-    <div className="app bg-primary text-primary h-screen">
+    <div className="app bg-primary text-primary min-h-screen">
       <Router>
         <Sidebar handleSubscribe={setSubscribeModal} handleContact={setContactModal} />
         <div className="content-part ml-20 px-16 pt-8">
