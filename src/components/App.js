@@ -20,7 +20,7 @@ const App = () => {
   const [contactModal, setContactModal] = useState(false)
   useEffect(() => {
     document.title = title
-  })
+  }, [title])
   return (
     <div className="app bg-primary text-primary min-h-screen">
       <Router>
