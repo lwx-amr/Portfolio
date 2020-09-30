@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Sidebar from './layouts/Sidebar'
@@ -18,7 +18,9 @@ const App = () => {
   const [title, setTitle] = useState(() => 'Who Am I')
   const [subscribeModal, setSubscribeModal] = useState(false)
   const [contactModal, setContactModal] = useState(false)
-
+  useEffect(() => {
+    document.title = title
+  })
   return (
     <div className="app bg-primary text-primary min-h-screen">
       <Router>
