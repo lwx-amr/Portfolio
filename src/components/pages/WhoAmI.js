@@ -66,7 +66,7 @@ const WhoAmI = ({ setPageTitle }) => {
   const pageTitle = 'Who Am I'
   useEffect(() => {
     setPageTitle(pageTitle)
-  }, [pageTitle])
+  })
   let i = 0
   const tagList = tags.map((tag) => {
     return (

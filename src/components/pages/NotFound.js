@@ -4,7 +4,7 @@ const NotFound = ({ setPageTitle }) => {
   const pageTitle = 'Page not Found'
   useEffect(() => {
     setPageTitle(pageTitle)
-  }, [pageTitle])
+  })
   return (
     <div className="w-1/2 mx-auto">
       <img src="/icons/404.svg" alt="404 icon" />

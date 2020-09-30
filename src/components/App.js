@@ -12,7 +12,7 @@ import Games from './pages/Games'
 import Apps from './pages/Apps'
 import Blogs from './pages/Blogs'
 import Tools from './pages/Tools'
-import NotFound from './partial/NotFound'
+import NotFound from './pages/NotFound'
 
 const App = () => {
   const [title, setTitle] = useState(() => 'Who Am I')
@@ -82,7 +82,7 @@ const App = () => {
                   />
                 )}
               />
-              <Route path="/*" component={() => <NotFound setPageTitle={setTitle} />} />
+              <Route component={() => <NotFound setPageTitle={setTitle} />} />
             </Switch>
           </div>
         </div>
