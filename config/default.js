@@ -3,7 +3,7 @@ module.exports = {
   app: {
     name: 'Portfolio website',
     baseUrl: `http://localhost:`,
-    port: process.env.PORT || 3010
+    port: process.env.PORT || 3080
   },
   client: {
     url: process.env.CLIENT || 'http://localhost:3000'
@@ -13,6 +13,8 @@ module.exports = {
     version: [1]
   },
   database: {
-    url: process.env.DB_URL || 'mongodb://localhost/portfolio'
+    url:
+      process.env.DB_URL ||
+      'mongodb+srv://rankup:rank1998@cluster0-9enme.mongodb.net/RUWorkSpaces?retryWrites=true&w=majority'
   }
 }

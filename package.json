@@ -5,10 +5,9 @@
   "main": "./src/app.js",
   "scripts": {
     "prebuild": "rm -rf ./build/*",
-    "build": "babel src -d ./build ./src",
-    "prestart": "npm run build",
-    "start": "node ./build/app.js",
-    "prod": "node ./build/app.js",
+    "build": "babel src -d ./build ./src && cd client-app && yarn build",
+    "prestart": "yarn run build",
+    "start": "export NODE_ENV=default && node ./build/app.js",
     "dev": "export NODE_ENV=development&& DEBUG=server:debug nodemon --exec babel-node ./src/app.js",
     "test": "DEBUG=server:debug mocha --require babel-core/register --reporter spec --exit   ./src/tests/ "
   },
@@ -39,6 +38,7 @@
     "validator": "^13.1.17"
   },
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",

@@ -54,7 +54,7 @@ mongoose.connect(db, {
 app.use(prefix, mainRoutes)
 */
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client-app/build/index.html'))
+  res.sendFile(path.join(__dirname, '../client-app/build/index.html'))
 })
 
 // Running server
