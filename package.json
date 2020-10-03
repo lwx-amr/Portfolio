@@ -5,7 +5,7 @@
   "main": "./src/app.js",
   "scripts": {
     "prebuild": "rm -rf ./build/*",
-    "build": "babel src -d ./build ./src && cd client-app && yarn build",
+    "build": "babel src -d ./build ./src && cd client-app && yarn install && yarn build",
     "prestart": "yarn run build",
     "start": "export NODE_ENV=default && node ./build/app.js",
     "dev": "export NODE_ENV=development&& DEBUG=server:debug nodemon --exec babel-node ./src/app.js",
