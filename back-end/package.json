@@ -1,0 +1,52 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Back-End service for my portfolio project",
+  "main": "./src/app.js",
+  "scripts": {
+    "prebuild": "rm -rf ./build/*",
+    "build": "babel src -d ./build ./src",
+    "prestart": "npm run build",
+    "start": "node ./build/app.js",
+    "prod": "node ./build/app.js",
+    "dev": "export NODE_ENV=development&& DEBUG=server:debug nodemon --exec babel-node ./src/app.js",
+    "test": "DEBUG=server:debug mocha --require babel-core/register --reporter spec --exit   ./src/tests/ "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwx-amr/portfolio"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "Mongo"
+  ],
+  "author": "Amr Hussien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lwx-amr/portfolio/issues"
+  },
+  "homepage": "https://github.com/lwx-amr/portfolio#readme",
+  "dependencies": {
+    "config": "^3.3.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.1.1",
+    "helmet": "^3.21.3",
+    "mongoose": "^5.9.4",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "debug": "^4.2.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2"
+  }
+}
