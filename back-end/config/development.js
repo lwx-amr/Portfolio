@@ -3,7 +3,7 @@ module.exports = {
   app: {
     name: 'Portfolio website',
     baseUrl: `http://localhost:`,
-    port: process.env.PORT || 3007
+    port: process.env.PORT || 3010
   },
   client: {
     url: process.env.CLIENT || 'http://localhost:3000'

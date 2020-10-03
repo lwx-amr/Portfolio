@@ -5,6 +5,7 @@ import RateLimit from 'express-rate-limit'
 import config from 'config'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
+import path from 'path'
 
 import mainRoutes from './api/mainRoutes'
 
@@ -27,6 +28,9 @@ app.use(cors(corsOptions))
 // Enable cookie parser
 app.use(cookieParser())
 
+// Static serving
+app.use(express.static(path.join(__dirname, '../client-app/build')))
+
 // Using Limiter to prevent attacks
 new RateLimit({
   windowMs: 15 * 60 * 1000, // 15 min is the time of our cycle
@@ -45,9 +49,13 @@ mongoose.connect(db, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-
+/*
 // Calling service routes
 app.use(prefix, mainRoutes)
+*/
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../client-app/build/index.html'))
+})
 
 // Running server
 app.listen(port, () => {
