@@ -4,10 +4,8 @@
   "description": "Back-End service for my portfolio project",
   "main": "./src/app.js",
   "scripts": {
-    "prebuild": "rm -rf ./build/*",
-    "build": "babel src -d ./build ./src && cd client-app && yarn install && yarn build",
-    "prestart": "yarn run build",
-    "start": "export NODE_ENV=default && node ./build/app.js",
+    "start": "node ./build/app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client-app && npm run build --prefix client-app",
     "dev": "export NODE_ENV=development&& DEBUG=server:debug nodemon --exec babel-node ./src/app.js",
     "test": "DEBUG=server:debug mocha --require babel-core/register --reporter spec --exit   ./src/tests/ "
   },
