@@ -4,13 +4,11 @@
   "description": "Back-End service for my portfolio project",
   "main": "./src/app.js",
   "scripts": {
-    "prebuild": "rm -rf ./build/*",
-    "build": "babel src -d ./build ./src",
-    "prestart": "yarn run build",
-    "start": "node ./build/app.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "dev": "export NODE_ENV=development&& DEBUG=server:debug nodemon --exec babel-node ./src/app.js",
-    "test": "DEBUG=server:debug mocha --require babel-core/register --reporter spec --exit   ./src/tests/ "
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/app.js",
+    "dev": "export NODE_ENV=development&& DEBUG=server:debug nodemon --exec babel-node ./src/app.js"
   },
   "repository": {
     "type": "git",
@@ -36,10 +34,10 @@
     "express-rate-limit": "^5.1.1",
     "helmet": "^3.21.3",
     "mongoose": "^5.9.4",
-    "validator": "^13.1.17"
+    "validator": "^13.1.17",
+    "@babel/cli": "^7.11.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
