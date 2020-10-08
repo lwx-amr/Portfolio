@@ -78,26 +78,28 @@ const WhoAmI = ({ setPageTitle }) => {
     )
   })
   return (
-    <div className="container px-56 text-secondary pb-20">
-      <div className="text-center">
+    <div className="container px-56 text-secondary pb-20 maxSm:px-2 maxSm:mt-8">
+      <div className="mx-auto w-48 maxSm:max-w-full maxSm:w-36">
         <img src="/images/me.png" alt="me icon" className="mx-auto rounded-full shadow-img" />
       </div>
-      <div className="my-10">
+      <div className="my-10 maxSm:my-6">
         <p>
           Hey there, I’m <span className="text-primary font-semibold">Amr Hussien</span> Software
           Engineering enthusiast, computer science fresh grade.
         </p>
         <p>Passionate about building web applications using javascript. </p>
       </div>
-      <div className="mb-10">
+      <div className="mb-10 maxSm:mb-6">
         <h4 className="text-xl font-semibold text-primary mb-2">Work Experience</h4>
-        <div className="flex justify-between">
-          <h3 className="text-base font-semibold text-secondary mb-4">
+        <div className="flex justify-between mb-4 flex-wrap">
+          <h3 className="text-lightg font-semibold maxSm:text-sm maxSm:mr-2">
             Web UI Developer - North 49 Digital
           </h3>
-          <span className="text-secondary font-semibold">2018 - 2020</span>
+          <div className="text-lightg font-semibold maxSm:text-sm">
+            <span>2018 - 2020</span>
+          </div>
         </div>
-        <div className="pl-12">
+        <div className="pl-12 maxSm:pl-4">
           <p>
             North is a Canadian company, my rule there was to convert XD, PSD, and InVision files to
             pixel perfect web pages using HTML - CSS - JS.
@@ -108,18 +110,18 @@ const WhoAmI = ({ setPageTitle }) => {
           </p>
         </div>
       </div>
-      <div className="mb-10">
+      <div className="mb-10 maxSm:mb-6">
         <h4 className="text-xl font-semibold text-primary mb-2">Education</h4>
-        <div className="flex justify-between">
-          <h3 className="text-base font-semibold text-secondary">
+        <div className="flex justify-between flex-wrap">
+          <h3 className="text-base font-semibold text-lightg maxSm:text-sm">
             Faculty Computers and Artificial Intelligence - Computer Science
           </h3>
-          <span className="text-secondary font-semibold">2016 - 2020</span>
+          <span className="text-lightg font-semibold maxSm:text-sm">2016 - 2020</span>
         </div>
       </div>
-      <div className="mb-10">
+      <div className="mb-10 maxSm:mb-6">
         <h4 className="text-xl font-semibold text-primary mb-2">
-          Core science related skills/Concepts
+          Software Engineering skills/Concepts
         </h4>
         <div className="flex justify-between">
           <p className="text-secondary">
@@ -127,11 +129,11 @@ const WhoAmI = ({ setPageTitle }) => {
           </p>
         </div>
       </div>
-      <div className="mb-10">
+      <div className="mb-10 maxSm:mb-6">
         <h4 className="text-xl font-semibold text-primary mb-4">Technology related skills</h4>
         <div className="flex flex-wrap justify-center">{tagList}</div>
       </div>
-      <div className="mt-24">
+      <div className="mt-24 maxSm:mb-6 maxSm:mt-12">
         <Footer />
       </div>
     </div>

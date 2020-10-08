@@ -51,7 +51,7 @@ const Sidebar = ({ handleSubscribe, handleContact }) => {
     )
   })
   return (
-    <div className="sidebar w-20 bg-secondary h-screen fixed flex flex-wrap shadow-sb">
+    <div className="sidebar w-20 bg-secondary h-screen fixed flex flex-wrap shadow-sb maxSm:hidden">
       {tabList}
       <div className="tab" key={i++}>
         <button

@@ -28,10 +28,14 @@ module.exports = {
       transparent: 'transparent'
     },
     screens: {
-      sm: { min: '640px', max: '767px' },
+      sm: { min: '576px', max: '767px' },
       md: { min: '768px', max: '1023px' },
       lg: { min: '1024px', max: '1279px' },
-      xl: { min: '1280px' }
+      xl: { min: '1280px' },
+      maxXl: { max: '1279px' },
+      maxLg: { max: '1023px' },
+      maxMd: { max: '767px' },
+      maxSm: { max: '575px' }
     },
     boxShadow: {
       xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',

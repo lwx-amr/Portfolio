@@ -2,7 +2,7 @@ import React from 'react'
 
 const NotYet = ({ handleSubscribe }) => {
   return (
-    <div className="main-part text-center">
+    <div className="main-part text-center maxSm:mt-12">
       <h4 className="text-2xl font-semibold text-primary relative">Coming Soon</h4>
       <div className="w-12 h-1 bg-green-200 mx-auto my-2"></div>
       <p className="text-secondary my-4 font-medium">
@@ -12,9 +12,9 @@ const NotYet = ({ handleSubscribe }) => {
         Hit the subscribe button to get notified when a new work is published.
       </p>
       <button onClick={() => handleSubscribe(true)}>
-        <div className="flex items-center bg-green-200 py-2 px-8 shadow-btn">
-          <h3 className="text-2xl mr-3 text-gray-100 font-medium">Subscribe</h3>
-          <img src="/icons/subscribe-w.svg" className="w-8" alt="Subscribe icon" />
+        <div className="flex items-center bg-green-200 py-2 px-8 shadow-btn maxSm:px-6">
+          <h3 className="text-2xl mr-3 text-gray-100 font-medium maxSm:text-xl">Subscribe</h3>
+          <img src="/icons/subscribe-w.svg" className="w-8 maxSm:w-6" alt="Subscribe icon" />
         </div>
       </button>
     </div>
