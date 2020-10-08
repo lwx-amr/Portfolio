@@ -15,8 +15,8 @@ const Navbar = ({ pageTitle }) => {
   }, [themeColor, isDark])
   return (
     <nav className="flex justify-between items-center mb-12 maxSm:mb-2 maxSm:mt-2">
-      <h3 className="text-3xl font-semibold maxSm:text-xl">{pageTitle}</h3>
-      <div className="dark-mode flex items-center">
+      <h3 className="text-3xl font-semibold maxSm:text-xl mr-2">{pageTitle}</h3>
+      <div className="dark-mode flex items-center flex-shrink-0">
         <span className="leading-none maxSm:hidden">{isDark ? 'Dark' : 'Light'} Mode</span>
         <button onClick={toggleMode} className="focus:outline-none">
           <div className="dark-btn mx-4 flex items-center relative">

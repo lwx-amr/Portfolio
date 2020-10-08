@@ -120,9 +120,7 @@ const WhoAmI = ({ setPageTitle }) => {
         </div>
       </div>
       <div className="mb-10 maxSm:mb-6">
-        <h4 className="text-xl font-semibold text-primary mb-2">
-          Software Engineering skills/Concepts
-        </h4>
+        <h4 className="text-xl font-semibold text-primary mb-2">Software Engineering skills</h4>
         <div className="flex justify-between">
           <p className="text-secondary">
             C++ - Java - Algorithms - Data Structures - OOP - Databases - Networks - Linux
