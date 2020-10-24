@@ -2,7 +2,7 @@ import React from 'react'
 
 const NotYet = ({ handleSubscribe }) => {
   return (
-    <div className="main-part text-center maxSm:mt-12">
+    <div className="main-part text-center maxSm:mt-12 maxMd:max-w-md maxMd:mx-auto">
       <h4 className="text-2xl font-semibold text-primary relative">Coming Soon</h4>
       <div className="w-12 h-1 bg-green-200 mx-auto my-2"></div>
       <p className="text-secondary my-4 font-medium">

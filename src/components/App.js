@@ -25,8 +25,8 @@ const App = () => {
     <div className="app bg-primary text-primary min-h-screen">
       <Router>
         <Sidebar handleSubscribe={setSubscribeModal} handleContact={setContactModal} />
-        <div className="content-part ml-20 px-16 pt-8 maxSm:ml-0 maxSm:p-2">
-          <div className="container">
+        <div className="content-part ml-20 px-16 pt-8 maxMd:ml-0 maxSm:p-2 md:px-8 lg:px-12 sm:px-4">
+          <div className="container maxLg:max-w-full">
             <Navbar pageTitle={title} />
             <Switch>
               <Route

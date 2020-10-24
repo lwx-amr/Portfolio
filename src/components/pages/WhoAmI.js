@@ -78,7 +78,7 @@ const WhoAmI = ({ setPageTitle }) => {
     )
   })
   return (
-    <div className="container px-56 text-secondary pb-20 maxSm:px-2 maxSm:mt-8">
+    <div className="px-56 text-secondary pb-20 sm:max-w-2xl maxMd:px-2 maxSm:mt-8 md:px-12 md:max-w-3xl maxXl:mx-auto lg:px-24 lg:max-w-4xl">
       <div className="mx-auto w-48 maxSm:max-w-full maxSm:w-36">
         <img src="/images/me.png" alt="me icon" className="mx-auto rounded-full shadow-img" />
       </div>
@@ -113,7 +113,7 @@ const WhoAmI = ({ setPageTitle }) => {
       <div className="mb-10 maxSm:mb-6">
         <h4 className="text-xl font-semibold text-primary mb-2">Education</h4>
         <div className="flex justify-between flex-wrap">
-          <h3 className="text-base font-semibold text-lightg maxSm:text-sm">
+          <h3 className="text-base font-semibold text-lightg maxSm:text-sm mr-2">
             Faculty Computers and Artificial Intelligence - Computer Science
           </h3>
           <span className="text-lightg font-semibold maxSm:text-sm">2016 - 2020</span>
