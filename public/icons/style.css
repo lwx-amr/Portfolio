@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'amr-port';
-  src:  url('fonts/amr-port.eot?g8rqmn');
-  src:  url('fonts/amr-port.eot?g8rqmn#iefix') format('embedded-opentype'),
-    url('fonts/amr-port.ttf?g8rqmn') format('truetype'),
-    url('fonts/amr-port.woff?g8rqmn') format('woff'),
-    url('fonts/amr-port.svg?g8rqmn#amr-port') format('svg');
+  src:  url('fonts/amr-port.eot?3eh7z1');
+  src:  url('fonts/amr-port.eot?3eh7z1#iefix') format('embedded-opentype'),
+    url('fonts/amr-port.ttf?3eh7z1') format('truetype'),
+    url('fonts/amr-port.woff?3eh7z1') format('woff'),
+    url('fonts/amr-port.svg?3eh7z1#amr-port') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,9 @@
 }
 .ico-favorite:before {
   content: "\e902";
+}
+.ico-align-left:before {
+  content: "\e906";
 }
 .ico-linkedin:before {
   content: "\e900";

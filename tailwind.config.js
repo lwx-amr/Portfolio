@@ -78,6 +78,11 @@ module.exports = {
       borderColor: {
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)'
+      },
+      spacing: {
+        14: '3.5rem',
+        22: '5.5rem',
+        28: '7rem'
       }
     }
   }

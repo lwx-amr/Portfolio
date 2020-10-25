@@ -78,7 +78,7 @@ const WhoAmI = ({ setPageTitle }) => {
     )
   })
   return (
-    <div className="px-56 text-secondary pb-20 sm:max-w-2xl maxMd:px-2 maxSm:mt-8 md:px-12 md:max-w-3xl maxXl:mx-auto lg:px-24 lg:max-w-4xl">
+    <div className="px-56 text-secondary pb-20 maxMd:pb-10 sm:max-w-2xl maxMd:px-2 md:px-12 md:max-w-3xl maxXl:mx-auto lg:px-24 lg:max-w-4xl">
       <div className="mx-auto w-48 maxSm:max-w-full maxSm:w-36">
         <img src="/images/me.png" alt="me icon" className="mx-auto rounded-full shadow-img" />
       </div>
@@ -131,7 +131,7 @@ const WhoAmI = ({ setPageTitle }) => {
         <h4 className="text-xl font-semibold text-primary mb-4">Technology related skills</h4>
         <div className="flex flex-wrap justify-center">{tagList}</div>
       </div>
-      <div className="mt-24 maxSm:mb-6 maxSm:mt-12">
+      <div className="mt-24 maxSm:mb-6 maxSm:mt-16">
         <Footer />
       </div>
     </div>

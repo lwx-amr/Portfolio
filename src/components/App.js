@@ -25,67 +25,69 @@ const App = () => {
     <div className="app bg-primary text-primary min-h-screen">
       <Router>
         <Sidebar handleSubscribe={setSubscribeModal} handleContact={setContactModal} />
-        <div className="content-part ml-20 px-16 pt-8 maxSm:p-2 sm:pt-2 sm:px-4  md:px-8 maxMd:ml-0 lg:px-12">
+        <div className="content-part ml-20 px-16 pt-8 relative maxSm:p-2 sm:pt-2 sm:px-4  md:px-8 maxMd:ml-0 lg:px-12">
           <div className="container maxLg:max-w-full">
             <Navbar pageTitle={title} />
-            <Switch>
-              <Route
-                exact
-                path={['/', '/about-me']}
-                component={() => <WhoAmI setPageTitle={setTitle} />}
-              />
-              <Route
-                exact
-                path="/algorithms-data-structures"
-                component={() => (
-                  <AlgAndDS
-                    setPageTitle={setTitle}
-                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/apps"
-                component={() => (
-                  <Apps
-                    setPageTitle={setTitle}
-                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/games"
-                component={() => (
-                  <Games
-                    setPageTitle={setTitle}
-                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/blogs"
-                component={() => (
-                  <Blogs
-                    setPageTitle={setTitle}
-                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/used-tools"
-                component={() => (
-                  <Tools
-                    setPageTitle={setTitle}
-                    NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
-                  />
-                )}
-              />
-              <Route component={() => <NotFound setPageTitle={setTitle} />} />
-            </Switch>
+            <div className="maxSm:mt-22 sm:mt-28">
+              <Switch>
+                <Route
+                  exact
+                  path={['/', '/about-me']}
+                  component={() => <WhoAmI setPageTitle={setTitle} />}
+                />
+                <Route
+                  exact
+                  path="/algorithms-data-structures"
+                  component={() => (
+                    <AlgAndDS
+                      setPageTitle={setTitle}
+                      NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/apps"
+                  component={() => (
+                    <Apps
+                      setPageTitle={setTitle}
+                      NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/games"
+                  component={() => (
+                    <Games
+                      setPageTitle={setTitle}
+                      NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/blogs"
+                  component={() => (
+                    <Blogs
+                      setPageTitle={setTitle}
+                      NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/used-tools"
+                  component={() => (
+                    <Tools
+                      setPageTitle={setTitle}
+                      NoContent={() => <NotYet handleSubscribe={setSubscribeModal} />}
+                    />
+                  )}
+                />
+                <Route component={() => <NotFound setPageTitle={setTitle} />} />
+              </Switch>
+            </div>
           </div>
         </div>
       </Router>
